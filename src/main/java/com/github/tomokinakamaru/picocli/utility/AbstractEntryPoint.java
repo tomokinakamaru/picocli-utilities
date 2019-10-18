@@ -11,6 +11,8 @@ import picocli.CommandLine;
     versionProvider = VersionProvider.class)
 public abstract class AbstractEntryPoint implements Runnable {
 
+  protected abstract void main() throws Exception;
+
   static final Map<Class<? extends Throwable>, Integer> exitCodes = new HashMap<>();
 
   @CommandLine.Option(
@@ -33,5 +35,14 @@ public abstract class AbstractEntryPoint implements Runnable {
     return new CommandLine(entryPoint)
         .setExitCodeExceptionMapper(ExitCodeExceptionMapper.INSTANCE)
         .execute(args);
+  }
+
+  @Override
+  public final void run() {
+    try {
+      main();
+    } catch (Exception e) {
+      throw new ExecutionError(e);
+    }
   }
 }

@@ -10,6 +10,9 @@ final class ExitCodeExceptionMapper implements IExitCodeExceptionMapper {
 
   @Override
   public int getExitCode(Throwable exception) {
+    if (exception instanceof ExecutionError) {
+      return ExitCode.get(exception.getCause().getClass());
+    }
     return ExitCode.get(exception.getClass());
   }
 }

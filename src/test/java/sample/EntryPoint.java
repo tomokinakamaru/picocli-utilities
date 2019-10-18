@@ -27,7 +27,7 @@ public final class EntryPoint extends AbstractEntryPoint {
   }
 
   @Override
-  public void run() {
+  public void main() {
     if (x) {
       throw new XException();
     }
