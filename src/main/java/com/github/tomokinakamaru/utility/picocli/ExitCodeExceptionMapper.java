@@ -1,4 +1,4 @@
-package com.github.tomokinakamaru.picocli.utility;
+package com.github.tomokinakamaru.utility.picocli;
 
 import picocli.CommandLine.IExitCodeExceptionMapper;
 

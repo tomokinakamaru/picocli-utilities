@@ -1,4 +1,4 @@
-import com.github.tomokinakamaru.picocli.utility.ExitCode;
+import com.github.tomokinakamaru.utility.picocli.ExitCode;
 import org.junit.jupiter.api.Test;
 import picocli.CommandLine;
 import sample.EntryPoint;

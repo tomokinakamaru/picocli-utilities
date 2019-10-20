@@ -1,7 +1,7 @@
 package sample;
 
-import com.github.tomokinakamaru.picocli.utility.AbstractEntryPoint;
-import com.github.tomokinakamaru.picocli.utility.ExitCode;
+import com.github.tomokinakamaru.utility.picocli.AbstractEntryPoint;
+import com.github.tomokinakamaru.utility.picocli.ExitCode;
 import picocli.CommandLine;
 
 public final class EntryPoint extends AbstractEntryPoint {

@@ -1,4 +1,4 @@
-package com.github.tomokinakamaru.picocli.utility;
+package com.github.tomokinakamaru.utility.picocli;
 
 import java.util.HashMap;
 import java.util.Map;
