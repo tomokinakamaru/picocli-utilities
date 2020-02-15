@@ -1,7 +1,5 @@
 package com.github.tomokinakamaru.utility.picocli;
 
-import java.util.HashMap;
-import java.util.Map;
 import picocli.CommandLine;
 
 @CommandLine.Command(
@@ -12,8 +10,6 @@ import picocli.CommandLine;
 public abstract class AbstractEntryPoint implements Runnable {
 
   protected abstract void main() throws Exception;
-
-  static final Map<Class<? extends Throwable>, Integer> exitCodes = new HashMap<>();
 
   @CommandLine.Option(
       names = {"-h", "--help"},
