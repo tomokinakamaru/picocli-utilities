@@ -13,26 +13,21 @@ final class TestEntryPoint {
 
   @Test
   void test2() {
-    assert EntryPoint.execute("-v") == ExitCode.VERSION_HELP;
-  }
-
-  @Test
-  void test3() {
     assert EntryPoint.execute("-x") == ExitCode.get(XException.class);
   }
 
   @Test
-  void test4() {
+  void test3() {
     assert EntryPoint.execute("-y") == ExitCode.UNKNOWN;
   }
 
   @Test
-  void test5() {
+  void test4() {
     assert EntryPoint.execute() == ExitCode.SUCCESS;
   }
 
   @Test
-  void test6() {
+  void test5() {
     assert EntryPoint.execute("a") == ExitCode.get(CommandLine.ParameterException.class);
   }
 }
